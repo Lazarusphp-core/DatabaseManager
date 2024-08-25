@@ -102,7 +102,7 @@ abstract class Database extends CredentialsManager
             // Prepare code
             foreach ($this->param as $key => $value) {
                 $type = $this->GetParamTpe($value);
-                $this->stmt->bindValue($key, $value,$type);
+                $this->stmt->bindValue(":$key", $value,$type);
             }
         }
     }
